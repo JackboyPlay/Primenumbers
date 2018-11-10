@@ -10,7 +10,7 @@ int* arr = new int[size];
 // the setup function runs once when you press reset or power the board
 void setup() {
 	Serial.begin(9600);
-	Serial.println("Bitte gebe einen gültigen Wertebereich ein.");
+	Serial.println("Bitte gib einen gÃ¼ltigen Wertebereich ein.");
 }
 
 // the loop function runs over and over again until power down or reset
@@ -20,7 +20,7 @@ void loop() {
 
 		int i = Serial.parseInt();
 		if (i < 2) {
-			Serial.println("Bitte definiere einen gültigen Wertebereich (x >= 2).");
+			Serial.println("Bitte definiere einen gÃ¼ltigen Wertebereich (x >= 2).");
 			return;
 		}
 
@@ -30,7 +30,7 @@ void loop() {
 			if (arr[x] != NULL) Serial.println(arr[x]);
 		}
 
-		Serial.println("Bitte gebe einen gültigen Wertebereich ein, damit die nächste Kalkulation gestartet werden kann.");
+		Serial.println("Bitte gib einen gÃ¼ltigen Wertebereich ein, damit die nÃ¤chste Kalkulation gestartet werden kann.");
 
 	}
 
@@ -55,7 +55,7 @@ void addToArray(int value) {
 
 	int* arr2 = new int[size];
 
-	while (s >= size) { //Arraygröße erhöhen
+	while (s >= size) { //ArraygrÃ¶ÃŸe erhÃ¶hen
 		delete[] arr2;
 		arr2 = new int[s + x];
 		x++;
@@ -76,7 +76,7 @@ void addToArray(int value) {
 int countArray() {
 	int count = 0;
 	for (int x = 0; x < size; x++) {
-		if (arr[x] != NULL) count++; //Prüfen, ob die Stelle x im Array besetzt ist.
+		if (arr[x] != NULL) count++; //PrÃ¼fen, ob die Stelle x im Array besetzt ist.
 	}
 	return count;
 }
