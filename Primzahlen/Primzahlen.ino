@@ -40,7 +40,7 @@ void findPrimenumbers(int range) {
 	for (int x = 2; x <= range; x++) { //0 und 1 sind keine Primzahlen
 		boolean isPrime = true;
 		for (int y = 1; y <= x; y++) {
-			if (x % y == 0 && y != x && y != 1) { //Wenn x geteilt durch y keinen Rest ergibt und y nicht x entspricht und y nicht 1 entspricht, so handelt es sich um keine Primzahl.
+			if (x % y == 0 && y != x && y != 1) { //Wenn x geteilt durch y keinen Rest ergibt und y weder x noch 1 entspricht, so handelt es sich um keine Primzahl.
 				isPrime = false;
 				break;
 			}
